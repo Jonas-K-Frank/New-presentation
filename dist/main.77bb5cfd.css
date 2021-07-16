@@ -75,6 +75,7 @@ html {
 .header__baggrund {
   grid-row: billede-start/billede-slut;
   background-image: url(/Header-bg-lille.dd771604.jpg);
+  background-size: cover;
 }
 .header__showcase {
   margin-top: 27rem;
