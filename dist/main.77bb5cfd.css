@@ -1,5 +1,96 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background: red;
+  background-image: linear-gradient(134.39deg, #161618 23.19%, #313132 84.29%);
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+  color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: [top-start] 6.3rem [top-slut billede-start] 40rem [billede-slut tekst-start] 1fr [tekst-slut];
+  height: 1000px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.header__toppen {
+  background: transparent;
+  backdrop-filter: blur(0.8rem);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.header__logotype {
+  font-family: Basic, sans-serif;
+  font-size: 3.6rem;
+  color: #f4f4f4;
+  margin: 1rem;
+}
+.header__navigation {
+  font-family: Gothic A1, sans-serif;
+  color: #f4f4f4;
+}
+.header__navigation ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 1.5rem;
+}
+.header__navigation ul li a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 1.7rem;
+}
+.header__navigation ul li a span {
+  text-decoration: none;
+  color: #efc862;
+  font-size: 1.7rem;
+}
+.header__baggrund {
+  grid-row: billede-start/billede-slut;
+  background-image: url(/Header-bg-lille.dd771604.jpg);
+}
+.header__showcase {
+  margin-top: 27rem;
+  text-align: center;
+}
+.header__showcase h1 {
+  font-family: Basic, sans-serif;
+  font-size: 5rem;
+}
+.header__showcase .rubrik-lille {
+  font-family: Basic, sans-serif;
+  font-size: 2rem;
+}
+.header__showcase .underrubrik {
+  font-family: Basic, sans-serif;
+  font-size: 2.5rem;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

@@ -1,5 +1,1 @@
-$red: red;
-
-body {
-	background: $red;
-}
+@use "index" as *;
