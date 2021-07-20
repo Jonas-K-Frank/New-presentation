@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 		<link rel="stylesheet" href="/main.77bb5cfd.css">
         <style>@import url('https://fonts.googleapis.com/css2?family=Basic&family=Gothic+A1:wght@300;400;800;900&family=Poppins:wght@300;600&display=swap');</style>
 		<title>Jonas Krat Frank. It's all about the web</title>
@@ -86,7 +86,7 @@ Jeg er en initiativrig og resultatorienteret person med et stort engagement, med
               <h3 class="card__header">Rejseblog</h3>
               <img src="/jkf-dk.ee31cd74.png" alt="" class="card__image">
               <p class="card__info">De fleste mennesker elsker jo at rejse, og jeg er ingen undtagelse. For at dele vores rejseoplevelser med omverdenen og for at huske turene, er jeg igang med at lave en blog. Jeg har valgt at bruge JAM stack til dette formål, både fordi jeg synes det er en spændende teknologi, men også fordi jeg gerne vil kunne mestre den.</p>
-              <button class="card__btn btn">Read now</button>
+              <button class="card__btn btn">Læs mere</button>
             </div>
           </div>
           <div class="card__cardbox">
@@ -94,14 +94,40 @@ Jeg er en initiativrig og resultatorienteret person med et stort engagement, med
               <h3 class="card__header">Webshop</h3>
               <img src="/jkf-dk.ee31cd74.png" alt="" class="card__image">
               <p class="card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button class="card__btn btn">Read now</button>
+              <button class="card__btn btn">Læs mere</button>
             </div>
           </div>
         </div>
-     
-    
 
 </section>
 
+
+<section class="kontakt" id="kontakt">
+    <div class="kapitel">
+        <p> /03</p>  <span class="titel"> kontakt</span>
+      </div>
+
+    <form name="JKF-Kontakt" class="cf" method="POST" data-netlify="true" action="../src/pages/success.html">
+        <div class="half left cf">
+          <input type="text" name="name" id="input-name" placeholder="Navn">
+          <input type="email" name="email" id="input-email" placeholder="Email adresse">
+        </div>
+
+        <div class="half right cf">
+          <textarea name="message" type="text" id="input-message" placeholder="Besked"></textarea>
+        </div>  
+        
+        <input type="submit" value="Send" id="input-submit">
+      </form>
+      <div class="row social" align="center">
+        <a target="blank" href="https://twitter.com/jonasKfrank"><i class="fab fa-twitter"></i></a>
+        <a target="blank" href="https://www.facebook.com/jonas.frank.359/"><i class="fab fa-facebook"></i></a>
+        <a target="blank" href="https://www.instagram.com/jonaskratfrank/"><i class="fab fa-instagram"></i></a>
+        <a target="blank" href="https://www.linkedin.com/in/jonaskratfrank/?locale=da_DK"><i class="fab fa-linkedin"></i></a>
+      </div>
+</section>
+<footer>
+    Copyright © Jonas Krat Frank 2021. All rights reserved.
+</footer>
 	</body>
 </html>
