@@ -1,0 +1,29 @@
+@use "typografi" as *;
+@use "farver" as *;
+@use "buttons" as *;
+
+.card {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
+	justify-items: center;
+	gap: 2rem;
+
+	&__cardbox {
+		background-color: $color-grey-dark;
+		padding: 2rem;
+		border-radius: 1rem;
+		text-align: center;
+		margin-top: 2rem;
+		//width: 90%;
+	}
+	&__header {
+		@include titel;
+	}
+	&__info {
+		@include brod;
+	}
+
+	&__image {
+		margin-top: 1rem;
+	}
+}

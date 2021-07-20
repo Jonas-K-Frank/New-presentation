@@ -1,5 +1,38 @@
+@use "farver" as *;
+
 $font-rubrik: Basic, sans-serif;
 $font-mellemrubrik: Gothic A1, sans-serif;
 $font-brod: Poppins, sans-serif;
 // Font sizes
 $default-font-size: 1.6rem;
+
+@mixin nummer {
+	color: $color-secondary;
+	font-size: 1.6rem;
+	margin: 3rem 3rem 2rem 2rem;
+}
+
+@mixin nummer-lille {
+	text-decoration: none;
+	color: $color-secondary;
+	font-size: 1.7rem;
+}
+@mixin titel {
+	color: $color-light;
+	font-size: 1.9rem;
+}
+
+@mixin manchet {
+	font-family: $font-rubrik;
+	font-size: 1.8rem;
+	font-style: italic;
+}
+@mixin mellemrubrik {
+	font-family: $font-mellemrubrik;
+	font-size: $default-font-size;
+	font-weight: bold;
+}
+@mixin brod {
+	font-family: $font-brod;
+	font-size: 1.6rem;
+}

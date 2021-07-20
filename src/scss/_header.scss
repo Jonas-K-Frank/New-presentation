@@ -6,8 +6,6 @@
 	grid-template-columns: 100%;
 	grid-template-rows: [top-start] 6.3rem [top-slut billede-start] 40rem [billede-slut tekst-start]1fr [tekst-slut];
 
-	height: 1000px;
-
 	background-color: rgba(255, 255, 255, 0.15);
 
 	&__toppen {
@@ -16,12 +14,16 @@
 		position: fixed;
 		width: 100%;
 		z-index: 3;
+		padding-bottom: 1rem;
 	}
 	&__logotype {
 		font-family: $font-rubrik;
 		font-size: 3.6rem;
 		color: $color-light;
 		margin: 1rem;
+	}
+	&__logos {
+		display: none;
 	}
 
 	&__navigation {
@@ -39,9 +41,7 @@
 				font-size: 1.7rem;
 			}
 			li a span {
-				text-decoration: none;
-				color: $color-secondary;
-				font-size: 1.7rem;
+				@include nummer-lille;
 			}
 		}
 	}

@@ -4,30 +4,47 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Basic&family=Gothic+A1:wght@200;400&family=Poppins:wght@300;400;700&display=swap"
-			rel="stylesheet"
-		/>
+
 		<link rel="stylesheet" href="scss/main.scss" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Basic&family=Gothic+A1:wght@300;400;800;900&family=Poppins:wght@300;600&display=swap');
+            </style>
 		<title>Jonas Krat Frank. It's all about the web</title>
 	</head>
 	<body>
 		<header class="header">
 			<div class="header__toppen">
 				<div class="header__logotype">JKF</div>
-				
+				<div class="header__logos">
+                    <svg class="icon">
+                        <use
+                            xlink:href="img/sprite.svg#433-github"
+                            onClick="parent.open('https://github.com/Jonas-K-Frank')"
+                        ></use></svg
+                    ><svg class="icon">
+                        <use
+                            xlink:href="img/sprite.svg#407-twitter"
+                            onClick="parent.open('https://twitter.com/jonasKfrank')"
+                        ></use></svg
+                    ><svg class="icon">
+                        <use
+                            xlink:href="img/sprite.svg#459-linkedin2"
+                            onClick="parent.open('https://www.linkedin.com/in/jonaskratfrank/?locale=da_DK')"
+                        ></use>
+                    </svg>
+                </div>
 					<nav class="header__navigation">
 						<ul>
 							<li>
 								<a href="#ommig"><span class="nummer-lille">01</span> om mig</a>
 							</li>
 							<li>
-								<a href="#ommig"
+								<a href="#projekter"
 									><span class="nummer-lille">02</span> projekter</a
 								>
 							</li>
 							<li>
-								<a href="#ommig"
+								<a href="#kontakt"
 									><span class="nummer-lille">03</span> kontakt</a
 								>
 							</li>
@@ -42,5 +59,66 @@
 				</div>
 			</div>
 		</header>
+<section class="om-mig" id="ommig">
+    <div class="kapitel">
+      <p> /01</p>  <span class="titel"> om mig</span>
+    </div>
+    <div class="om-mig__manchet">Webudvikling, webdesign, opdateringer og vedligeholdelse af websites er noget af det jeg arbejder med som E-handelsspecialist og Webmaster.</div>
+    <div class="brodtekst">
+        <div class="mellemrubrik">Kreativitet og energi</div>
+        <p class="brod">Mit udgangspunkt er lidt anderledes end de fleste webudviklere. Igennem min uddannelse og i mine tidligere jobs som mediegrafiker har jeg lært og arbejdet meget med visuel kommunikation og UX.  
+        Fordi jeg har et ben i hver lejr, både som mediegrafiker og front-end udvikler, er jeg også et naturligt bindeled mellem designere og udviklerer.
+        Jeg brænder for grafisk design og webdesign, og har både indsigt, viden og praktisk erfaring med webdesign og andre digitale løsninger.</p>
+        <div class="mellemrubrik">Digital nørd</div>
+        <p class="brod">Jeg har en ægte lidenskab for alle ting digitalt og for at være på forkant med teknologier og digital innovation. En af de store motivationsfaktorer for mig er at blive ved med at lære og holde mit sind åben for forandring.</p>
+        <div class="mellemrubrik">Kundernes ambassadør</div>
+        <p class="brod">Med min gode kommercielle forståelse og min sans for at sætte kunden i fokus, ser jeg i høj grad mig selv som kundens ambassadør, og jeg brænder for at give de besøgende en fantastisk og sammenhængende oplevelse i alle kanaler både online og i butikkerne. </p>
+<div class="mellemrubrik">Udfordrer staus quo</div>
+<p class="brod">Jeg tager gerne ansvar for at udvikle og implementere løsninger der indfrier og måske endda overgår de besøgendes forventninger. 
+Ved altid at udfordrer eksisterende arbejdsmetoder og holdninger, skaber vi en endnu bedre oplevelse for kunderne og gøre en forskel for både virksomhed og kunder. 
+<div class="mellemrubrik">Kreativitet og energi</div>
+<p class="brod">Som en kreativ fleksibel person har jeg det godt i et innovativt arbejdsmiljø, hvor jeg sammen med mine kolleger kan bidrage til at skabe en god oplevelse for de mange mennesker der besøger et website. Når kreativitet og nytænkning er hvad der skal til for at løse en udfordring, er jeg i mit es. 
+Jeg er en initiativrig og resultatorienteret person med et stort engagement, med et behov for at skabe succeser, og som elsker at møde udfordringer.</p>
+<div class="mellemrubrik">Godt humør</div>
+<p class="brod">Jeg er en energisk, entusiastisk og humørfyldt kollega, med et stærkt drive og jeg formår at formidle mine visioner og planer, så alle involverede stakeholders føler sig trygge. Jeg er god til at lære fra mig og at sikre at alle har forstået hvordan en opgave løses eller hvordan et program virker. og det er helt naturligt for mig at videndele og involvere relevante samarbejdsparter. </p>
+    
+</section>
+
+<section class="projekter" id="projekter">
+    <div class="kapitel">
+        <p> /02</p>  <span class="titel"> projekter</span>
+      </div>
+     
+        <div class="card">
+          <div class="card__cardbox">
+            <div class="card__content">
+              <h3 class="card__header">Bourbon finder</h3>
+              <img src="./img/jkf-dk.png" alt="" class="card__image">
+              <p class="card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button class="card__btn btn">Se mere</button>
+            </div>
+          </div>
+          <div class="card__cardbox">
+            <div class="card__content">
+              <h3 class="card__header">Rejseblog</h3>
+              <img src="./img/jkf-dk.png" alt="" class="card__image">
+              <p class="card__info">De fleste mennesker elsker jo at rejse, og jeg er ingen undtagelse. For at dele vores rejseoplevelser med omverdenen og for at huske turene, er jeg igang med at lave en blog. Jeg har valgt at bruge JAM stack til dette formål, både fordi jeg synes det er en spændende teknologi, men også fordi jeg gerne vil kunne mestre den.</p>
+              <button class="card__btn btn">Read now</button>
+            </div>
+          </div>
+          <div class="card__cardbox">
+            <div class="card__content">
+              <h3 class="card__header">Webshop</h3>
+              <img src="./img/jkf-dk.png" alt="" class="card__image">
+              <p class="card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button class="card__btn btn">Read now</button>
+            </div>
+          </div>
+        </div>
+     
+    
+</div>
+</section>
+
 	</body>
 </html>

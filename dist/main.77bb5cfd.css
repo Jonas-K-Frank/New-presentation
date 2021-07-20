@@ -36,7 +36,6 @@ html {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: [top-start] 6.3rem [top-slut billede-start] 40rem [billede-slut tekst-start] 1fr [tekst-slut];
-  height: 1000px;
   background-color: rgba(255, 255, 255, 0.15);
 }
 .header__toppen {
@@ -45,12 +44,16 @@ html {
   position: fixed;
   width: 100%;
   z-index: 3;
+  padding-bottom: 1rem;
 }
 .header__logotype {
   font-family: Basic, sans-serif;
   font-size: 3.6rem;
   color: #f4f4f4;
   margin: 1rem;
+}
+.header__logos {
+  display: none;
 }
 .header__navigation {
   font-family: Gothic A1, sans-serif;
@@ -92,6 +95,142 @@ html {
 .header__showcase .underrubrik {
   font-family: Basic, sans-serif;
   font-size: 2.5rem;
+}
+
+.om-mig {
+  width: 90%;
+}
+.om-mig__manchet {
+  font-family: Basic, sans-serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  margin-left: 2rem;
+}
+
+.mellemrubrik {
+  font-family: Gothic A1, sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.brod {
+  font-family: Poppins, sans-serif;
+  font-size: 1.6rem;
+  margin-left: 2rem;
+}
+
+.kapitel {
+  color: #efc862;
+  font-size: 1.6rem;
+  margin: 3rem 3rem 2rem 2rem;
+}
+.kapitel span {
+  color: #f4f4f4;
+  font-size: 1.9rem;
+}
+.kapitel span::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-bottom: 2px solid #efc862;
+  width: 25%;
+  margin-top: 3rem;
+}
+.kapitel span::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-bottom: 1px solid rgba(239, 200, 98, 0.4);
+  width: 25%;
+  margin-top: 3.05rem;
+}
+
+.btn, .btn:link, .btn:visited {
+  background-color: #efc862;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  margin-top: 1.3rem;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn:active, .btn:focus {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.btn--white {
+  background-color: #f4f4f4;
+  color: #161618;
+}
+.btn--white::after {
+  background-color: #f4f4f4;
+}
+.btn--green {
+  background-color: #161618;
+  color: #f4f4f4;
+}
+.btn--green::after {
+  background-color: #f4f4f4;
+}
+.btn--animated {
+  animation-name: moveInBottom;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.75s;
+  animation-fill-mode: backwards;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
+  justify-items: center;
+  gap: 2rem;
+}
+.card__cardbox {
+  background-color: #161618;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.card__header {
+  color: #f4f4f4;
+  font-size: 1.9rem;
+}
+.card__info {
+  font-family: Poppins, sans-serif;
+  font-size: 1.6rem;
+}
+.card__image {
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

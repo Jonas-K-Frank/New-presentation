@@ -1,0 +1,49 @@
+@use "typografi" as *;
+@use "farver" as *;
+
+.om-mig {
+    width: 90%;
+
+
+	&__manchet {
+		@include manchet;
+		margin-left: 2rem;
+	}
+
+}
+.mellemrubrik{
+    @include mellemrubrik;
+    margin-top:1rem;
+    margin-left: 2rem;
+}
+.brod{
+    @include brod;
+    margin-left: 2rem;
+}
+
+.kapitel {
+    @include nummer;
+
+    span {
+        @include titel;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            border-bottom: 2px solid $color-secondary;
+            width: 25%;
+            margin-top: 3rem;
+        }
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            border-bottom: 1px solid rgba($color-secondary, 0.4);
+            width: 25%;
+            margin-top: 3.05rem;
+        }
+    }
+
+
+}
