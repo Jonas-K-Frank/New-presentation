@@ -19,6 +19,12 @@ footer {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+@media (min-width: 152.5em) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -39,7 +45,6 @@ a {
 }
 
 html {
-  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -47,24 +52,48 @@ html {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: [top-start] 6.3rem [top-slut billede-start] 40rem [billede-slut tekst-start] 1fr [tekst-slut];
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #000;
 }
 .header__toppen {
   background: transparent;
   backdrop-filter: blur(0.8rem);
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 3;
   padding-bottom: 1rem;
+}
+@media (min-width: 500px) {
+  .header__toppen {
+    height: 8rem;
+  }
 }
 .header__logotype {
   font-family: Basic, sans-serif;
   font-size: 3.6rem;
   color: #f4f4f4;
   margin: 1rem;
+  z-index: 5;
 }
 .header__logos {
   display: none;
+}
+@media (min-width: 31.5em) {
+  .header__logos {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 2rem;
+    margin-top: 25rem;
+  }
+  .header__logos:hover, .header__logos:focus, .header__logos:active {
+    cursor: pointer;
+  }
+  .header__logos svg {
+    fill: #f4f4f4;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 2rem;
+  }
 }
 .header__navigation {
   font-family: Gothic A1, sans-serif;
@@ -72,24 +101,50 @@ html {
 }
 .header__navigation ul {
   display: flex;
-  justify-content: space-between;
   list-style: none;
-  margin: 0 1.5rem;
+  justify-content: center;
+  margin-top: 7rem;
 }
 .header__navigation ul li a {
   text-decoration: none;
   color: #f4f4f4;
   font-size: 1.7rem;
+  margin-right: 2.5rem;
 }
 .header__navigation ul li a span {
   text-decoration: none;
   color: #efc761;
   font-size: 1.7rem;
 }
+@media (min-width: 31.5em) {
+  .header__navigation {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+  }
+  .header__navigation ul {
+    justify-content: flex-end;
+    margin: 0 2.5rem;
+  }
+  .header__navigation li {
+    margin-left: 2.5rem;
+  }
+}
 .header__baggrund {
   grid-row: billede-start/billede-slut;
   background-image: url(/Header-bg-lille.dd771604.jpg);
   background-size: cover;
+}
+@media (min-width: 31.5em) {
+  .header__baggrund {
+    grid-column: 2/3;
+  }
+}
+@media (min-width: 64em) {
+  .header__baggrund {
+    background-image: url(/Header-baggrund.a0c15fb4.jpg);
+  }
 }
 .header__showcase {
   margin-top: 27rem;
@@ -107,9 +162,45 @@ html {
   font-family: Basic, sans-serif;
   font-size: 2.5rem;
 }
+@media (min-width: 50em) {
+  .header__showcase {
+    text-align: left;
+    margin-left: 2rem;
+    margin-top: 25rem;
+  }
+  .header__showcase h1 {
+    font-size: 4rem;
+  }
+  .header__showcase .rubrik-lille {
+    font-size: 4rem;
+  }
+}
 
+@media (min-width: 31.5em) {
+  .header {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    grid-template-rows: [billede-start] 40rem [billede-slut tekst-start] 1fr [tekst-slut];
+  }
+  .header__logotype {
+    font-family: Basic, sans-serif;
+    font-size: 3.8rem;
+    color: #f4f4f4;
+    margin: 1rem;
+  }
+  .header__logos {
+    display: flex;
+  }
+}
 .om-mig {
   width: 90%;
+}
+@media (min-width: 64em) {
+  .om-mig {
+    margin-left: 7rem;
+    border-left: 1px solid #f4f4f4;
+    column-width: 70ch;
+  }
 }
 .om-mig__manchet {
   font-family: Basic, sans-serif;
@@ -122,7 +213,7 @@ html {
   font-family: Gothic A1, sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
-  margin-top: 1rem;
+  margin-top: 4rem;
   margin-left: 2rem;
 }
 

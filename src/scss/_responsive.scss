@@ -1,0 +1,28 @@
+@mixin respond($breakpoint) {
+	@if $breakpoint == phablet {
+		// 500px
+		@media (min-width: 31.5em) {
+			@content;
+		}
+	} @else if $breakpoint == tablet-portrait {
+		// 800px
+		@media (min-width: 50em) {
+			@content;
+		}
+	} @else if $breakpoint == tablet-landscape {
+		// 1024px
+		@media (min-width: 64em) {
+			@content;
+		}
+	} @else if $breakpoint == laptop {
+		//1440px
+		@media (min-width: 90em) {
+			@content;
+		}
+	} @else if $breakpoint == desktop {
+		//2400px
+		@media (min-width: 152.5em) {
+			@content;
+		}
+	}
+}

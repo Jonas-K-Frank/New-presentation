@@ -1,47 +1,88 @@
 @use "typografi" as *;
 @use "farver" as *;
+@use "responsive" as *;
 
 .header {
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: [top-start] 6.3rem [top-slut billede-start] 40rem [billede-slut tekst-start]1fr [tekst-slut];
 
-	background-color: rgba(255, 255, 255, 0.15);
+	background-color: #000;
 
 	&__toppen {
 		background: transparent;
 		backdrop-filter: blur(0.8rem);
 		position: fixed;
-		width: 100%;
+		width: 100vw;
 		z-index: 3;
 		padding-bottom: 1rem;
+
+		@media (min-width: 500px) {
+			height: 8rem;
+		}
 	}
 	&__logotype {
 		font-family: $font-rubrik;
 		font-size: 3.6rem;
 		color: $color-light;
 		margin: 1rem;
+		z-index: 5;
 	}
+
 	&__logos {
 		display: none;
+
+		@include respond(phablet) {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			margin-left: 2rem;
+			margin-top: 25rem;
+			&:hover,
+			&:focus,
+			&:active {
+				cursor: pointer;
+			}
+			svg {
+				fill: $color-light;
+				width: 2.5rem;
+				height: 2.5rem;
+				margin-bottom: 2rem;
+			}
+		}
 	}
 
 	&__navigation {
 		font-family: $font-mellemrubrik;
 		color: $color-light;
+
 		ul {
 			display: flex;
-			justify-content: space-between;
 			list-style: none;
-			margin: 0 1.5rem;
+			justify-content: center;
+			margin-top: 7rem;
 
 			li a {
 				text-decoration: none;
 				color: $color-light;
 				font-size: 1.7rem;
+				margin-right: 2.5rem;
 			}
 			li a span {
 				@include nummer-lille;
+			}
+		}
+		@include respond(phablet) {
+			position: absolute;
+			top: 3rem;
+			left: 0;
+			width: 100%;
+			ul {
+				justify-content: flex-end;
+				margin: 0 2.5rem;
+			}
+			li {
+				margin-left: 2.5rem;
 			}
 		}
 	}
@@ -50,6 +91,15 @@
 		grid-row: billede-start/billede-slut;
 		background-image: url(../img/Header-bg-lille.jpg);
 		background-size: cover;
+
+		@include respond(phablet){
+			grid-column: 2/3;
+		}
+
+		@include respond(tablet-landscape){
+			background-image: url(../img/Header-baggrund.jpg);
+			
+		}
 	}
 	&__showcase {
 		margin-top: 27rem;
@@ -66,6 +116,37 @@
 		.underrubrik {
 			font-family: $font-rubrik;
 			font-size: 2.5rem;
+		}
+
+		@include respond(tablet-portrait) {
+			text-align: left;
+			margin-left: 2rem;
+			margin-top: 25rem;
+
+			h1 {
+				font-size: 4rem;
+			}
+			.rubrik-lille {
+				font-size: 4rem;
+			}
+		}
+	}
+}
+
+@include respond(phablet) {
+	.header {
+		display: grid;
+		grid-template-columns: 7rem 1fr;
+		grid-template-rows: [billede-start] 40rem [billede-slut tekst-start]1fr [tekst-slut];
+
+		&__logotype {
+			font-family: $font-rubrik;
+			font-size: 3.8rem;
+			color: $color-light;
+			margin: 1rem;
+		}
+		&__logos {
+			display: flex;
 		}
 	}
 }
