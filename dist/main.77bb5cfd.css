@@ -50,9 +50,15 @@ html {
 
 .header {
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: [top-start] 6.3rem [top-slut billede-start] 40rem [billede-slut tekst-start] 1fr [tekst-slut];
+  grid-template-columns: 1fr;
+  grid-template-rows: 6.3rem 50vh;
   background-color: #000;
+}
+@media (min-width: 31.5em) {
+  .header {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+  }
 }
 .header__toppen {
   background: transparent;
@@ -62,7 +68,7 @@ html {
   z-index: 3;
   padding-bottom: 1rem;
 }
-@media (min-width: 500px) {
+@media (min-width: 31.5em) {
   .header__toppen {
     height: 8rem;
   }
@@ -74,16 +80,26 @@ html {
   margin: 1rem;
   z-index: 5;
 }
+@media (min-width: 31.5em) {
+  .header__logotype {
+    font-family: Basic, sans-serif;
+    font-size: 3.8rem;
+    color: #f4f4f4;
+    margin: 1rem;
+  }
+}
 .header__logos {
   display: none;
 }
 @media (min-width: 31.5em) {
   .header__logos {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-left: 2rem;
-    margin-top: 25rem;
+    display: grid;
+    grid-column: 1/2;
+    grid-template-rows: auto 4rem 4rem;
+    align-items: end;
+    justify-content: center;
+    top: 10rem;
+    left: 0;
   }
   .header__logos:hover, .header__logos:focus, .header__logos:active {
     cursor: pointer;
@@ -132,7 +148,7 @@ html {
   }
 }
 .header__baggrund {
-  grid-row: billede-start/billede-slut;
+  grid-row: 2/3;
   background-image: url(/Header-bg-lille.dd771604.jpg);
   background-size: cover;
 }
@@ -148,6 +164,7 @@ html {
 }
 .header__showcase {
   margin-top: 27rem;
+  margin-bottom: 10rem;
   text-align: center;
 }
 .header__showcase h1 {
@@ -161,6 +178,18 @@ html {
 .header__showcase .underrubrik {
   font-family: Basic, sans-serif;
   font-size: 2.5rem;
+}
+@media (min-width: 31.5em) {
+  .header__showcase {
+    text-align: left;
+    margin-left: 2rem;
+  }
+  .header__showcase h1 {
+    font-size: 4rem;
+  }
+  .header__showcase .rubrik-lille {
+    font-size: 3rem;
+  }
 }
 @media (min-width: 50em) {
   .header__showcase {
@@ -176,30 +205,16 @@ html {
   }
 }
 
-@media (min-width: 31.5em) {
-  .header {
-    display: grid;
-    grid-template-columns: 7rem 1fr;
-    grid-template-rows: [billede-start] 40rem [billede-slut tekst-start] 1fr [tekst-slut];
-  }
-  .header__logotype {
-    font-family: Basic, sans-serif;
-    font-size: 3.8rem;
-    color: #f4f4f4;
-    margin: 1rem;
-  }
-  .header__logos {
-    display: flex;
-  }
-}
 .om-mig {
   width: 90%;
 }
 @media (min-width: 64em) {
   .om-mig {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 5rem repeat(2, 10rem) 1fr;
     margin-left: 7rem;
     border-left: 1px solid #f4f4f4;
-    column-width: 70ch;
   }
 }
 .om-mig__manchet {
@@ -207,13 +222,27 @@ html {
   font-size: 1.8rem;
   font-style: italic;
   margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 64em) {
+  .om-mig__manchet {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+}
+
+@media (min-width: 64em) {
+  .brodtekst {
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    column-width: 70ch;
+  }
 }
 
 .mellemrubrik {
   font-family: Gothic A1, sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
-  margin-top: 4rem;
   margin-left: 2rem;
 }
 
@@ -221,6 +250,7 @@ html {
   font-family: Poppins, sans-serif;
   font-size: 1.6rem;
   margin-left: 2rem;
+  margin-bottom: 3rem;
 }
 
 .kapitel {
@@ -247,6 +277,18 @@ html {
   border-bottom: 1px solid rgba(239, 199, 97, 0.4);
   width: 25%;
   margin-top: 3.05rem;
+}
+@media (min-width: 31.5em) {
+  .kapitel {
+    margin-top: 10rem;
+  }
+}
+@media (min-width: 64em) {
+  .kapitel {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-top: 3rem;
+  }
 }
 
 .btn, .btn:link, .btn:visited {

@@ -4,10 +4,15 @@
 
 .header {
 	display: grid;
-	grid-template-columns: 100%;
-	grid-template-rows: [top-start] 6.3rem [top-slut billede-start] 40rem [billede-slut tekst-start]1fr [tekst-slut];
+	grid-template-columns: 1fr;
+	grid-template-rows: 6.3rem 50vh;
 
 	background-color: #000;
+
+	@include respond(phablet) {
+		display: grid;
+		grid-template-columns: 7rem 1fr;
+	}
 
 	&__toppen {
 		background: transparent;
@@ -17,7 +22,7 @@
 		z-index: 3;
 		padding-bottom: 1rem;
 
-		@media (min-width: 500px) {
+		@include respond(phablet) {
 			height: 8rem;
 		}
 	}
@@ -27,17 +32,26 @@
 		color: $color-light;
 		margin: 1rem;
 		z-index: 5;
+
+		@include respond(phablet) {
+			font-family: $font-rubrik;
+			font-size: 3.8rem;
+			color: $color-light;
+			margin: 1rem;
+		}
 	}
 
 	&__logos {
 		display: none;
 
 		@include respond(phablet) {
-			display: flex;
-			flex-direction: column;
-			position: absolute;
-			margin-left: 2rem;
-			margin-top: 25rem;
+			display: grid;
+			grid-column: 1/2;
+			grid-template-rows: auto 4rem 4rem;
+			align-items: end;
+			justify-content: center;
+			top: 10rem;
+			left: 0;
 			&:hover,
 			&:focus,
 			&:active {
@@ -88,21 +102,21 @@
 	}
 
 	&__baggrund {
-		grid-row: billede-start/billede-slut;
+		grid-row: 2/3;
 		background-image: url(../img/Header-bg-lille.jpg);
 		background-size: cover;
 
-		@include respond(phablet){
+		@include respond(phablet) {
 			grid-column: 2/3;
 		}
 
-		@include respond(tablet-landscape){
+		@include respond(tablet-landscape) {
 			background-image: url(../img/Header-baggrund.jpg);
-			
 		}
 	}
 	&__showcase {
 		margin-top: 27rem;
+		margin-bottom: 10rem;
 		text-align: center;
 		h1 {
 			font-family: $font-rubrik;
@@ -118,6 +132,17 @@
 			font-size: 2.5rem;
 		}
 
+		@include respond(phablet) {
+			text-align: left;
+			margin-left: 2rem;
+
+			h1 {
+				font-size: 4rem;
+			}
+			.rubrik-lille {
+				font-size: 3rem;
+			}
+		}
 		@include respond(tablet-portrait) {
 			text-align: left;
 			margin-left: 2rem;
@@ -129,24 +154,6 @@
 			.rubrik-lille {
 				font-size: 4rem;
 			}
-		}
-	}
-}
-
-@include respond(phablet) {
-	.header {
-		display: grid;
-		grid-template-columns: 7rem 1fr;
-		grid-template-rows: [billede-start] 40rem [billede-slut tekst-start]1fr [tekst-slut];
-
-		&__logotype {
-			font-family: $font-rubrik;
-			font-size: 3.8rem;
-			color: $color-light;
-			margin: 1rem;
-		}
-		&__logos {
-			display: flex;
 		}
 	}
 }
